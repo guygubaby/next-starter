@@ -1,4 +1,8 @@
 import type { Config } from 'tailwindcss'
+import tailwindcssAnimate from 'tailwindcss-animate'
+
+// @ts-expect-error no types
+import { getIconCollections, iconsPlugin } from '@egoist/tailwindcss-icons'
 
 const config: Config = {
   content: [
@@ -15,6 +19,12 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    tailwindcssAnimate,
+    iconsPlugin({
+      collections: getIconCollections(),
+    }),
+  ],
 }
+
 export default config

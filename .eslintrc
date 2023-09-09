@@ -1,6 +1,7 @@
 {
   "extends": ["@antfu", "next/core-web-vitals"],
   "rules": {
-    "antfu/top-level-function": "off"
+    "antfu/top-level-function": "off",
+    "@typescript-eslint/no-require-imports": "off"
   }
 }
