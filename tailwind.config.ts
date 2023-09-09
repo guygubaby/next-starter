@@ -22,8 +22,11 @@ const config: Config = {
   plugins: [
     tailwindcssAnimate,
     iconsPlugin({
-      collections: getIconCollections(),
+      collections: getIconCollections([
+        'carbon',
+      ]),
     }),
+
   ],
 }
 
