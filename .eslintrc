@@ -1,6 +1,12 @@
 {
-  "extends": ["@antfu", "next/core-web-vitals"],
+  "extends": [
+    "@antfu",
+    "next",
+    "next/core-web-vitals",
+    "plugin:tailwindcss/recommended"
+  ],
   "rules": {
+    "tailwindcss/classnames-order": "off",
     "antfu/top-level-function": "off",
     "@typescript-eslint/no-require-imports": "off"
   }
