@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Button } from '@nextui-org/button'
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
       <Link className="mt-10 text-slate-500" href="/hi/bryce">
         GO
       </Link>
+
+      <Button>Click me</Button>
     </main>
   )
 }

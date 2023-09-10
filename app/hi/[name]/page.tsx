@@ -1,15 +1,31 @@
 'use client'
 
-import { useParams } from 'next/navigation'
+import { useChat } from 'ai/react'
 
-const Name = () => {
-  const { name } = useParams()
+export default function MyComponent() {
+  const { messages, input, handleInputChange, handleSubmit } = useChat({
+    api: '/api/chat',
+  })
 
   return (
     <div>
-      <h1>Hi, {name}!</h1>
+      <ul>
+        {messages.map((m, index) => (
+          <li key={index}>
+            {m.role === 'user' ? 'User: ' : 'AI: '}
+            {m.content}
+          </li>
+        ))}
+      </ul>
+
+      <form onSubmit={handleSubmit}>
+        <label>
+          Say something...
+          <input value={input} onChange={handleInputChange} />
+        </label>
+
+        <button type="submit">Send</button>
+      </form>
     </div>
   )
 }
-
-export default Name

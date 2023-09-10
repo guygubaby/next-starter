@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss'
 import tailwindcssAnimate from 'tailwindcss-animate'
+import { nextui } from '@nextui-org/react'
 
 // @ts-expect-error no types
 import { getIconCollections, iconsPlugin } from '@egoist/tailwindcss-icons'
@@ -9,6 +10,7 @@ const config: Config = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -19,7 +21,9 @@ const config: Config = {
       },
     },
   },
+  darkMode: 'class',
   plugins: [
+    nextui(),
     tailwindcssAnimate,
     iconsPlugin({
       collections: getIconCollections([
