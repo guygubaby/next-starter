@@ -1,6 +1,6 @@
 {
   "extends": [
-    "@antfu",
+    "@antfu/eslint-config-react",
     "next",
     "next/core-web-vitals",
     "plugin:tailwindcss/recommended"
@@ -9,5 +9,11 @@
     "tailwindcss/classnames-order": "off",
     "antfu/top-level-function": "off",
     "@typescript-eslint/no-require-imports": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.json"],
+      "parser": "jsonc-eslint-parser"
+    }
+  ]
 }
