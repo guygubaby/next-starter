@@ -2,8 +2,7 @@
 
 ### Getting Started
 
-First, run the development server:
-
 ```bash
+pnpx degit guygubaby/next-starter my-app
 pnpm dev
 ```
