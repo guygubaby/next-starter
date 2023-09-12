@@ -1,9 +1,9 @@
 import type { Config } from 'tailwindcss'
-import tailwindcssAnimate from 'tailwindcss-animate'
-import { nextui } from '@nextui-org/react'
+import TailwindcssAnimate from 'tailwindcss-animate'
+import { nextui as NextUI } from '@nextui-org/react'
 
 // @ts-expect-error no types
-import { getIconCollections, iconsPlugin } from '@egoist/tailwindcss-icons'
+import { iconsPlugin as IconsPlugin, getIconCollections } from '@egoist/tailwindcss-icons'
 
 const config: Config = {
   content: [
@@ -12,20 +12,13 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-    },
-  },
   darkMode: 'class',
   plugins: [
-    nextui(),
-    tailwindcssAnimate,
-    iconsPlugin({
+    NextUI(),
+
+    TailwindcssAnimate,
+
+    IconsPlugin({
       collections: getIconCollections([
         'carbon',
       ]),
