@@ -1,7 +1,6 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { Button, Input } from '@nextui-org/react'
 
 export default function Home() {
   const inputRef = useRef<HTMLInputElement>(null)
@@ -18,23 +17,16 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24 ring">
+    <main className="flex min-h-screen flex-col items-center p-24 ring [&>p]:text-2xl">
       <p className="flex items-center gap-2">
-        <span>It works!</span>
+        <span className="text-red">It works!</span>
         <span className="i-carbon-favorite-filled text-red-500"></span>
       </p>
 
       <div className="my-8">
-        <Input
-          className="w-full"
-          ref={inputRef}
-          value={name}
-          onValueChange={val => setName(val)}
-          placeholder="What is your name?"
-        ></Input>
+        a
       </div>
 
-      <Button onClick={() => go()}>Go</Button>
     </main>
   )
 }

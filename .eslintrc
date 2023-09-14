@@ -1,6 +1,7 @@
 {
   "extends": [
     "@antfu/eslint-config-react",
+    "@unocss",
     "next",
     "next/core-web-vitals",
     "plugin:tailwindcss/recommended"

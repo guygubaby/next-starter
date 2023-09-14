@@ -1,20 +1,19 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Providers } from './providers'
 
 export const metadata: Metadata = {
   title: 'Infocare DevOps',
   description: 'Infocare DevOps Platform',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body>
-        <Providers>
-          {children}
-        </Providers>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
