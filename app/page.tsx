@@ -1,5 +1,6 @@
 'use client'
 
+import { Button, Input } from 'antd'
 import { useRouter } from 'next/navigation'
 
 export default function Home() {
@@ -17,16 +18,23 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24 ring [&>p]:text-2xl">
+    <main className="min-h-screen flex flex-col items-center p-24 ring [&>p]:text-xl">
       <p className="flex items-center gap-2">
-        <span className="text-red">It works!</span>
-        <span className="i-carbon-favorite-filled text-red-500"></span>
+        <span>It works!</span>
+        <span className="i-carbon-favorite-filled text-red"></span>
       </p>
 
       <div className="my-8">
-        a
+        <Input
+          value={name}
+          onChange={e => setName(e.target.value)}
+          placeholder="Input your name"
+        ></Input>
       </div>
 
+      <Button type="primary" onClick={go}>
+        Go
+      </Button>
     </main>
   )
 }

@@ -1,5 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import { ConfigProvider } from 'antd'
+import StyledComponentsRegistry from '../lib/AntdRegistry'
 
 export const metadata: Metadata = {
   title: 'Infocare DevOps',
@@ -13,7 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <StyledComponentsRegistry>
+          <ConfigProvider>{children}</ConfigProvider>
+        </StyledComponentsRegistry>
+      </body>
     </html>
   )
 }
