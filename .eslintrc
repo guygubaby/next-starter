@@ -3,11 +3,9 @@
     "@antfu/eslint-config-react",
     "@unocss",
     "next",
-    "next/core-web-vitals",
-    "plugin:tailwindcss/recommended"
+    "next/core-web-vitals"
   ],
   "rules": {
-    "tailwindcss/classnames-order": "off",
     "antfu/top-level-function": "off",
     "@typescript-eslint/no-require-imports": "off"
   },
