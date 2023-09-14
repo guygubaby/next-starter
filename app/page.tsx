@@ -2,7 +2,6 @@
 
 import { useRouter } from 'next/navigation'
 import { Button, Input } from '@nextui-org/react'
-import { useRef, useState } from 'react'
 
 export default function Home() {
   const inputRef = useRef<HTMLInputElement>(null)
